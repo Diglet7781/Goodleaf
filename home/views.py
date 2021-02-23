@@ -2,8 +2,8 @@ from django.shortcuts import render, HttpResponse, redirect,get_object_or_404
 from home.models import Contact
 from django.contrib import messages 
 from django.contrib.auth.models import User 
-from django.contrib.auth  import authenticate,  login, logout
-from blog.models import Ask2,Comment
+from django.contrib.auth  import authenticate, login, logout
+from blog.models import Ask2, Comment, Profile
 from django.urls import reverse_lazy
 from django.contrib.auth.forms import PasswordChangeForm,UserChangeForm,PasswordResetForm
 from django.contrib.auth.views import PasswordChangeView,PasswordResetView,PasswordResetDoneView,PasswordResetConfirmView,PasswordResetCompleteView
@@ -31,19 +31,19 @@ from django.http import HttpResponse, JsonResponse
 
 def edit_profile(request):
     if request.method == 'POST':
-        form = EditProfileForm(data=request.POST)
+        form = EditProfileForm(request.POST, request.FILES, instance=request.user.profile)
         if form.is_valid():
             form.save()
             messages.success(request, "Profile Updated")
-            return redirect('home:home')
+            return redirect('home')
     else:
         if request.user.is_authenticated:
-            form = EditProfileForm()
+            form = EditProfileForm(instance=request.user.profile)
     # Display a blank or invalid form.
     context = {'form': form}
     return render(request, 'home/edit_profile.html', context)
     # return render(request, 'home/profile.html')
-            
+
 class PasswordChangeView(PasswordChangeView):
     form_class = PasswordChangeForm
     success_url = reverse_lazy('password_success')

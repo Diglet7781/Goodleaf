@@ -5,7 +5,7 @@ from blog.models import Profile,Comment
 from ckeditor_uploader.fields import RichTextUploadingField
 from django import forms
 
-class EditProfileForm(UserChangeForm):
+class EditProfileForm(forms.ModelForm):
     email = forms.EmailField(widget=forms.EmailInput(attrs={'class':'form-control'}))
     first_name =forms.CharField(max_length=100,widget=forms.TextInput(attrs={'class':'form-control'}))
     last_name =forms.CharField(max_length=100,widget=forms.TextInput(attrs={'class':'form-control'}))
@@ -17,8 +17,8 @@ class EditProfileForm(UserChangeForm):
     # is_active = forms.CharField(max_length=100,widget=forms.CheckboxInput(attrs={'class':'form-check'}))
     # date_joined = forms.CharField(max_length=100,widget=forms.TextInput(attrs={'class':'form-control'}))
     class Meta:
-        model = Profile
-        fields = ('username','email','first_name','last_name','country','password','profile_pic')
+        model=Profile
+        fields=('first_name','last_name','email','country','bio','profile_pic')
 class CommentForm(forms.ModelForm):
     body = RichTextUploadingField()
     class Meta:
