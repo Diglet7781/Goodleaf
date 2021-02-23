@@ -41,7 +41,7 @@ def edit_profile(request):
             form = EditProfileForm()
     # Display a blank or invalid form.
     context = {'form': form}
-    return render(request, 'home/profile.html', context)
+    return render(request, 'home/edit_profile.html', context)
     # return render(request, 'home/profile.html')
             
 class PasswordChangeView(PasswordChangeView):

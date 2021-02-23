@@ -1,5 +1,5 @@
 /* Add here all your CSS customizations */
-@media (max-width: 700px) {
+@media (max-width: 400px) {
     .header-logo img{
         width: 60px;
         height: 30px !important;
@@ -23,13 +23,13 @@
     .header-row .d-flex .header-extra-info-icon a{
         padding: 0;
         margin: 0;
-        margin-left: 1rem;
+        margin-left: 0.2rem;
     }
     .header-row .d-flex .header-extra-info-icon i{
         font-size: 1.7rem;
     }
     .header-row .d-flex .header-extra-info-text {
-        padding-left: 0.8rem;
+        padding-left: 0.5rem;
     }
     .header-row .d-flex .header-extra-info-text a{
         padding: 5px !important;
@@ -57,8 +57,8 @@
         margin: 0 !important;
     }
     .c{
-        width: 5rem !important;
-        padding-left: 2rem !important;
+        width: 9rem !important;
+        padding-left: 1rem !important;
     }
     .btn-modified {
         margin-left: 8rem !important;
@@ -71,11 +71,108 @@
     }
     .random1{
         margin-left: 5px !important;
-        padding-left: 9px !important;
+        padding:0 10px !important;
+        margin-right: 5px !important;
+        overflow-x:hidden;
+    }
+
+    .btn-modern{
+        width: 17rem !important;
+    }
+    .random1 .card .row div p{
+        font-size: 0.85rem !important;
+    }
+
+    .random1 .card .row div img{
+        width: 40px;
+        height: 40px;
+    }
+    /* .random1 .card a{
+        font-size: 1rem !important;
+    } */
+    #nontoggle{
+        display: none;
+    }
+    #toggle{
+        margin-right:0 !important;
+        padding: 0 10px !important;
+    }
+}
+@media (min-width: 401px) and (max-width: 699px) {
+    .header-logo img{
+        width: 60px;
+        height: 30px !important;
+    }
+    .header-logo a{
+        font-size: 1rem !important;
+    }
+    
+    .header-row .d-flex{
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .header-row .d-flex li{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .header-row .d-flex .header-extra-info-icon{
         margin-right: 0 !important;
     }
-    .random2{
-        margin-left: 6rem !important;
+    .header-row .d-flex .header-extra-info-icon a{
+        padding: 0;
+        margin: 0;
+        margin-left: 0.8rem;
+    }
+    .header-row .d-flex .header-extra-info-icon i{
+        font-size: 1.7rem;
+    }
+    .header-row .d-flex .header-extra-info-text {
+        padding-left: 1rem;
+    }
+    .header-row .d-flex .header-extra-info-text a{
+        padding: 5px !important;
+        margin-left: 3px !important;
+        margin-right: 0;
+        width: 4rem;
+        text-transform: uppercase;
+        height: 2rem;
+        font-size: 0.8rem;
+    }
+    /* .header-row .search-with-select a {
+        margin-right: 0 !important;
+
+        align-self: center !important;
+    } */
+    .header-row .search-with-select i {
+        font-size: 1.7rem !important;
+    }
+    .header-row .search-with-select{
+        margin-bottom: 1rem !important;
+        /* margin-left: 1rem !important; */
+    }
+
+    .header-row .header-nav-features {
+        margin: 0 !important;
+    }
+    .c{
+        width: 12rem !important;
+        padding-left: 1rem !important;
+    }
+    .btn-modified {
+        margin-left: 8rem !important;
+    }
+    .random{
+        margin-left: 0 !important;
+    }
+    .custom-title-box{
+        margin-left: 3rem !important;
+    }
+    .random1{
+        margin-left: 5px !important;
+        padding:0 10px !important;
+        margin-right: 5px !important;
+        overflow-x:hidden;
     }
     .btn-modern{
         width: 18rem !important;
@@ -91,9 +188,15 @@
     /* .random1 .card a{
         font-size: 1rem !important;
     } */
+    #nontoggle{
+        display: none;
+    }
+    #toggle{
+        margin-right:0 !important;
+        padding: 0 10px !important;
+    }
 }
-
-@media (min-width: 700px) and (max-width: 800px) {
+@media (min-width: 700px) and (max-width: 991px) {
     .header-logo img{
         width: 90px;
         height: 60px !important;
@@ -165,16 +268,29 @@
     .random{
         margin-left: 4rem !important;
     }
+    #nontoggle{
+        display: none;
+    }
+    #toggle{
+        margin-right:0 !important;
+    }
+    .random1{
+        margin:0 !important;
+    }
 }
-@media (min-width: 800px) and (max-width: 1100px) {
+@media (min-width: 992px){
     .btn-modified {
         margin-left: 28rem !important;
     }
+    #toggle{
+        display: none;
+    }
 }
 .custom-btn-style-1, .custom-btn-style-1:active {
-	background: rgb(0, 49, 68);
-	border: none;
-	border-radius: 50px !important;
+	background-color: #0380be;
+	border-color: #0380be #0380be #006699;
+	color: #FFF;
+    border-radius: 50px;
 	padding: 13px 20px;
 	font-size: 15px;
 	font-weight: bold;
@@ -185,8 +301,9 @@
 }
 
 .custom-btn-style-1:hover {
-	opacity: 0.9;
-    color: #fff;
+	background-color: #016292;
+	border-color: #016292 #016292 #0380be;
+	color: #FFF;
 }
 .custom-title-box a {
 	float: center;
@@ -206,4 +323,29 @@
     text-transform: uppercase;
     padding: 5px;
     padding-top: 4px;
+}
+.container .row .my-2 a{
+    color: white;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.container .row .category:hover{
+    text-decoration: underline;
+}
+.container .row .category{
+    width: 4.8rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0.1rem
+}
+.card .row .category1{
+    text-transform: uppercase !important;
+    font-weight: bold !important;
+    margin-bottom: 0;
+    color: black;
+}
+.card .row .category1:hover{
+    text-decoration: underline;
 }

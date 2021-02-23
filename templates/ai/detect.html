@@ -5,13 +5,18 @@
 
 {% block body %}
     <div class="body mt-4">
+    <div class="container pt-3 pb-2">
     <form method="POST" action="predict/" enctype="multipart/form-data">
     {{ form.as_p }}
     {% csrf_token %}
         <center>
             <input type="file" id = 'image' class="mt-4 ml-4" name="filepath" required><br>
         </center>
-            <button class="btn btn-modified mt-5" type="submit" style="margin-left: 35rem;">Detect Disease</button>
+        <center>
+            <button class="btn btn-modified mt-4" type="submit" style="margin-left:0 !important;">Detect Disease</button>
             </button>
+        </center>
+        </form>
+    </div>
     </div>
 {% endblock body %}

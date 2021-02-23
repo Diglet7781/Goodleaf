@@ -5,8 +5,13 @@
 {% block body %}
 
 <div class="body">
-    <div class="row" style="margin-top: 1.5rem;">
-        <div class="random2 col-lg-2 mr-2" style="margin-left: 4.6em;">
+    <div class="container pt-0 pb-2">
+    <div class="row" style="margin-top: 1rem;">
+        <div class="col-lg-2 mr-5" id = 'toggle'>
+            <div class="toggle toggle-primary" data-plugin-toggle>
+            <div class="toggle" >
+            <a class="toggle-title">Categories</a>
+            <div class="toggle-content">
             <ul class="list list-icons" >
                     <li>
                         <a type="button" class="btn btn-light mb-2" href="/category/apple"><img src="{% static 'img/category/Apple/apple.png' %}" width="30" height="30"
@@ -62,8 +67,67 @@
                     </li>
             </ul>
         </div>
-        <div class="random1 col-lg-6 mr-3 ml-3">
-            <div class="row mb-2 pt-4 pl-3 pb-4 " style="background-color: white; border: 1px solid rgba(99, 99, 99, 0.247)">
+        </div>
+        </div>
+        </div>
+        <div class="col-lg-2 mr-5" id = 'nontoggle'>
+            <ul class="list list-icons" >
+                    <li>
+                        <a type="button" class="btn btn-light mb-2" href="/category/apple"><img src="{% static 'img/category/Apple/apple.png' %}" width="30" height="30"
+                            style="border-radius: 100%;"></i> Apple</a>
+                    </li>
+                    <li>
+                        <a type="button" class="btn btn-light mb-2" href="/category/blueberry"><img src="{% static 'img/category/Blueberry/blueberry.jpg' %}" width="30" height="30"
+                            style="border-radius: 100%;"></i>Blueberry</a>
+                    </li>
+                    <li>
+                        <a type="button" class="btn btn-light mb-2" href="/category/cherry"><img src="{% static 'img/category/Cherry/cherry.jpg' %}" width="30" height="30"
+                            style="border-radius: 100%;"></i> Cherry</a>
+                    </li>
+                    <li>
+                        <a type="button" class="btn btn-light mb-2" href="/category/potato"><img src="{% static 'img/category/Potato/potato.jpg' %}" width="30" height="30"
+                            style="border-radius: 100%;"></i> Potato</a>
+                    </li>
+                    <li>
+                        <a type="button" class="btn btn-light mb-2" href="/category/corn"><img src="{% static 'img/category/Corn/corn.jpg' %}" width="30" height="30"
+                            style="border-radius: 100%;"></i>Corn</a>
+                    </li>					<li>
+                        <a type="button" class="btn btn-light mb-2" href="/category/grape"><img src="{% static 'img/category/Grape/grape.jpg' %}" width="30" height="30"
+                            style="border-radius: 100%;"></i>Grape</a>
+                    </li>
+                    <li>
+                        <a type="button" class="btn btn-light mb-2" href="/category/orange"><img src="{% static 'img/category/Orange/orange.jpg' %}" width="30" height="30"
+                            style="border-radius: 100%;"></i>Orange</a>
+                    </li>
+                                    <li>
+                        <a type="button" class="btn btn-light mb-2" href="/category/peach"><img src="{% static 'img/category/Peach/peach.jpg' %}" width="30" height="30"
+                            style="border-radius: 100%;"></i>Peach</a>
+                    </li>
+                                                   <li>
+                        <a type="button" class="btn btn-light mb-2" href="/category/pepper"><img src="{% static 'img/category/Pepper_Bell/bellpepper.jpg' %}" width="30" height="30"
+                            style="border-radius: 100%;"></i>Pepper Bell</a>
+                    </li>
+                                                                   <li>
+                        <a type="button" class="btn btn-light mb-2" href="/category/raspberry"><img src="{% static 'img/category/Raspberry/raspberry.png' %}" width="30" height="30"
+                            style="border-radius: 100%;"></i>Raspberry</a>
+                    </li>
+                                                                   <li>
+                        <a type="button" class="btn btn-light mb-2" href="/category/soyabean"><img src="{% static 'img/category/Soyabean/soybean.jpg' %}" width="30" height="30"
+                            style="border-radius: 100%;"></i>Soyabean</a>
+                    </li>
+                                       <li> <a type="button" class="btn btn-light mb-2" href="/category/squash"><img src="{% static 'img/category/Squash/squash.jpg' %}" width="30" height="30"
+                            style="border-radius: 100%;"></i>Squash</a>
+                    </li>
+                                                       <li> <a type="button" class="btn btn-light mb-2" href="/category/strawberry"><img src="{% static 'img/category/Strawberry/strawberry.png' %}" width="30" height="30"
+                            style="border-radius: 100%;"></i>Strawberry</a>
+                    </li>
+                                                                       <li> <a type="button" class="btn btn-light mb-2" href="/category/tomato"><img src="{% static 'img/category/Tomato/tomato.jpg' %}" width="30" height="30"
+                            style="border-radius: 100%;"></i>Tomato</a>
+                    </li>
+            </ul>
+        </div>
+        <div class="random1 col-lg-6 mr-1 ml-3">
+            <div class="row mb-2 pt-4 pb-4 " style="background-color: white; border: 1px solid rgba(99, 99, 99, 0.247)">
                 <div class="col-auto mr-0 pr-0">
                     <img src="{% static 'img/iuser.png' %}" width="40" height="40" style="border-radius: 100%;">
                 </div>
@@ -112,13 +176,13 @@
                     
             </div>
             {% for Ask2 in postss %}
-            <div class="card row mb-2  p-4">
+            <div class="card row mb-2 p-2">
                 <div class="row">
                     <div class="col-auto mr-0 pr-0"><img src="{% static 'img/iuser.png' %}" width="50" height="50"
                             style="border-radius: 100%;"></div>
                     <div class="col-auto pl-2">
                         <p style="margin-bottom: 0;">{{Ask2.posted_by}}</p>
-                        <p style="text-transform: uppercase !important; font-weight: bold !important; margin-bottom: 0; ">{{ Ask2.question_title }}</p>
+                        <a class = 'category1' href = '/category/{{ Ask2.question_title }}'>{{ Ask2.question_title }}</a>
                     </div>
                     <div class="col-auto ml-0 pl-0 pr-1">
                         <p style="color: rgba(0, 0, 0, 0.212); margin-bottom: 0;">{{Ask2.date_posted}}</p>
@@ -131,20 +195,21 @@
             </div>
             {% endfor %}
         </div>
-        <div class="random1 col-lg-2 ml-4">
-            <div class="card row border-radius-2 bg-color-light box-shadow-1 p-3">
+        <div class="random1 col-lg-3 ml-4">
+            <div class="card row border-radius-2 bg-color-light box-shadow-1 p-2">
                 <div class="card-body">
                     <h4 class="card-title mb-1 text-4 font-weight-bold"># Fun Fact</h4>
                     <p class="card-text">Farming began around 10,000 B.C. during the First Agricultural Revolution, when nomadic tribes began to farm. Additionally, this is when the eight so-called “founder crops” of agriculture appeared: 1) emmer wheat, 2) einkorn wheat, 3) hulled barley, 4) peas, 5) lentils, 6) bitter vetch, 7) chickpeas, and 8) flax.</p>
                 </div>
             </div>
-            <div class="card row border-radius-2 bg-color-light box-shadow-1 p-3 mt-2">
+            <div class="card row border-radius-2 bg-color-light box-shadow-1 p-2 mt-2">
                 <div class="card-body">
                     <h4 class="card-title mb-1 text-4 font-weight-bold"># Fun fact</h4>
                     <p class="card-text">The Mesopotamians built the first simple irrigation system around 7000 B.C. The earliest large-scale irrigation system was created around 4000 B.C. in southern Russia. This system had canals up to 10 feet across and more than a mile long.</p>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </div>
 

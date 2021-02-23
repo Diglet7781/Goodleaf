@@ -68,7 +68,7 @@
                             </div>
 
                             <div
-                                class="c header-nav-features header-nav-features-no-border col-lg-5 col-xl-6 px-0 ml-5 mr-0 mt-3">
+                                class="c header-nav-features header-nav-features-no-border col-lg-5 col-xl-6 px-0 ml-5 mr-0 pl-4 mt-3">
                                 <div class="header-nav-feature pr-lg-4 pr-xl-5 mr-0">
                                     <form  action="/search" method="get" >
                                         <div class="search-with-select">
@@ -110,7 +110,7 @@
                                     </form>
                                 </div>
                             </div>
-                            <div class="d-flex col-lg-3 ml-0 pr-0 pl-0 pl-xl-4 ">
+                            <div class="d-flex col-lg-3 ml-0 pr-0 pl-0 pl-xl-2 ">
                                 <ul class="header-extra-info">
                                     <li class="ml-0 ml-xl-3">
                                       {% if user.is_authenticated %}
@@ -132,10 +132,10 @@
                                         </div>
                                       {% else %}
                                         <div class="header-extra-info-text">
-                                          <a class="btn btn-primary btn-secondary ml-2" href = '/detect'>Detect</a>
+                                          <a class="btn btn-primary btn-secondary ml-4" href = '/detect'>Detect</a>
                                         </div>
                                         <div class="header-extra-info-text">
-                                          <a class="btn btn-primary btn-primary ml-2" data-toggle="modal" data-target="#signupModal">Login</a>
+                                          <a class="btn btn-primary btn-primary ml-4" data-toggle="modal" data-target="#signupModal">Login</a>
                                         </div>
                                       {% endif %}
                                     </li>
@@ -312,7 +312,7 @@ h6 span{
   display: block;
 }
 
-.form-group{ 
+.form-group1{ 
   position: relative;
   display: block;
   margin: 0;
@@ -355,46 +355,46 @@ h6 span{
     transition: all 200ms linear;
 }
 
-.form-group input:-ms-input-placeholder  {
+.form-group1 input:-ms-input-placeholder  {
   color: #c4c3ca;
   opacity: 0.7;
   -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
-.form-group input::-moz-placeholder  {
+.form-group1 input::-moz-placeholder  {
   color: #c4c3ca;
   opacity: 0.7;
   -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
-.form-group input:-moz-placeholder  {
+.form-group1 input:-moz-placeholder  {
   color: #c4c3ca;
   opacity: 0.7;
   -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
-.form-group input::-webkit-input-placeholder  {
+.form-group1 input::-webkit-input-placeholder  {
   color: #c4c3ca;
   opacity: 0.7;
   -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
-.form-group input:focus:-ms-input-placeholder  {
+.form-group1 input:focus:-ms-input-placeholder  {
   opacity: 0;
   -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
-.form-group input:focus::-moz-placeholder  {
+.form-group1 input:focus::-moz-placeholder  {
   opacity: 0;
   -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
-.form-group input:focus:-moz-placeholder  {
+.form-group1 input:focus:-moz-placeholder  {
   opacity: 0;
   -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
-.form-group input:focus::-webkit-input-placeholder  {
+.form-group1 input:focus::-webkit-input-placeholder  {
   opacity: 0;
   -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
@@ -495,28 +495,28 @@ h6 span{
 {% csrf_token %}
 <form action="/signup" method="post" >
   {% csrf_token %}
-                      <div class="form-group">
+                      <div class="form-group1">
                         <input type="text" name="username" class="form-style" placeholder="Choose a unique username" id="username" autocomplete="off" required>
                         <i class="input-icon uil uil-user"></i>
                       </div>  
-                      <div class="form-group mt-2">
+                      <div class="form-group1 mt-2">
                         <input type="email" name="email" class="form-style" placeholder="Your Email" id="email" autocomplete="off" required>
                         <i class="input-icon uil uil-at"></i>
                       </div>  
-                      <div class="form-group mt-2">
+                      <div class="form-group1 mt-2">
                         <input type="text" name="fname" class="form-style" placeholder="First Name" id="fname" autocomplete="off" required>
                        <i class="input-icon uil uil-user"></i>
                       </div>
-                      <div class="form-group mt-2">
+                      <div class="form-group1 mt-2">
                         <input type="text" name="lname" class="form-style" placeholder="Last Name" id="lname" autocomplete="off" required>
                        <i class="input-icon uil uil-user"></i>
                       </div>
                       {% csrf_token %}
-                      <div class="form-group mt-2">
+                      <div class="form-group1 mt-2">
                         <input type="password" name="pass1" class="form-style" placeholder="Your Password" id="pass1" autocomplete="off" required>
                         <i class="input-icon uil uil-lock-alt"></i>
                       </div>
-                       <div class="form-group mt-2">
+                       <div class="form-group1 mt-2">
                         <input type="password" name="pass2" class="form-style" placeholder="Confirm Password" id="pass2" autocomplete="off" required>
                         <i class="input-icon uil uil-lock-alt"></i>
                       </div>

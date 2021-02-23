@@ -2249,18 +2249,20 @@ html body.body .btn:active {
 	border-color: #212529;
 }
 .btn-modified, .btn-modified1 {
-	background-color: #212529;
-	border-color: #212529 #212529 #0a0c0d;
+	background-color: #0380be;
+	border-color: #0380be #0380be #006699;
 	color: #FFF;
 	font-weight: bold;
+	text-transform: uppercase;
+	padding: 0.5rem;
 }
 .btn-modified:hover, .btn-modified1:hover{
-	background-color: #32383e;
-	border-color: #383f45 #383f45 #212529;
+	background-color: #016292;
+	border-color: #016292 #016292 #0380be;
 	color: #FFF;
 }
 .btn-modified:active, .btn-modified1:active, .btn-modified:focus, .btn-modified1:focus{
-	background-color: #000 !important;
+	background-color: #016292 !important;
 }
 /* Button Light */
 html body .btn-light,
@@ -14960,7 +14962,7 @@ section.timeline .timeline-box .owl-carousel {
 .toggle > label,
 	.toggle > .toggle-title {
 	transition: all .15s ease-out;
-	background: #f7f7f7;
+	background: #fffcfc;
 	border-left: 3px solid #CCC;
 	border-radius: 5px;
 	color: #CCC;

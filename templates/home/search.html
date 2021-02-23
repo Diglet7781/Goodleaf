@@ -24,12 +24,12 @@
     {% for Ask2 in allPosts  %}
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 my-4 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-            <strong class="d-inline-block mb-2 text-primary">{{Ask2.question_title}}</strong>
+            <a href='category/{{Ask2.question_title}}' class="category">{{Ask2.question_title}}</a>
             <h3 class="mb-0">{{Ask2.question_text|safe}}</h3>
             <div class="mb-1 text-muted">{{Ask2.date_posted}}</div>
             <p class="card-text mb-auto">{{post.content| truncatechars:500}}</p>
             <div class="my-2">
-            	<a href="/question/{{Ask2.qid}}/{{Ask2.slug}}" role="button" class="btn btn-primary">Continue reading</a>
+            	<a href="/question/{{Ask2.qid}}/{{Ask2.slug}}" role="button" class="btn btn-primary">Read more</a>
             </div>
             
         </div>
