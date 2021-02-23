@@ -2,44 +2,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %} Home {% endblock title %}
-<!-- Mobile Metas -->
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
-
-<!-- Web Fonts  -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light&display=swap"
-    rel="stylesheet" type="text/css">
-
-<!-- Vendor CSS -->
-<link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
-<link rel="stylesheet" href="{% static 'vendor/fontawesome-free/css/all.min.css' %}">
-<link rel="stylesheet" href="{% static 'vendor/animate/animate.compat.css' %}">
-<link rel="stylesheet" href="{% static 'vendor/simple-line-icons/css/simple-line-icons.min.css' %}">
-<link rel="stylesheet" href="{% static 'vendor/magnific-popup/magnific-popup.min.css' %}">
-
-
-<!-- Theme CSS -->
-<link rel="stylesheet" href="{% static 'css/theme.css' %}">
-<link rel="stylesheet" href="{% static 'css/theme-elements.css' %}">
-<link rel="stylesheet" href="{% static 'css/theme-blog.css' %}">
-<link rel="stylesheet" href="{% static 'css/theme-shop.css' %}">
-<link rel="stylesheet" href="{% static 'css/custom.css' %}">
-<!-- Current Page CSS -->
-<link rel="stylesheet" href="{% static 'vendor/circle-flip-slideshow/css/component.css' %}">
-<!-- Skin CSS -->
-<link rel="stylesheet" href="{% static 'css/skins/default.css' %}">
-
-<!-- Theme Custom CSS -->
-<link rel="stylesheet" href="{% static 'css/custom.css' %}">
-
-<!-- Head Libs -->
-<script src="{% static 'vendor/modernizr/modernizr.min.js' %}"></script>
-
-
 {% block body %}
 
 <div class="body">
     <div class="row" style="margin-top: 1.5rem;">
-        <div class="random2 col-lg-2 mr-5" style="margin-left: 2.6em;">
+        <div class="random2 col-lg-2 mr-2" style="margin-left: 4.6em;">
             <ul class="list list-icons" >
                     <li>
                         <a type="button" class="btn btn-light mb-2" href="/category/apple"><img src="{% static 'img/category/Apple/apple.png' %}" width="30" height="30"
@@ -145,26 +112,26 @@
                     
             </div>
             {% for Ask2 in postss %}
-            <div class="card row mb-2 p-4">
+            <div class="card row mb-2  p-4">
                 <div class="row">
-                    <div class="col-auto mr-0 pr-0"><img src="{% static 'img/iuser.png' %}" width="30" height="30"
+                    <div class="col-auto mr-0 pr-0"><img src="{% static 'img/iuser.png' %}" width="50" height="50"
                             style="border-radius: 100%;"></div>
                     <div class="col-auto pl-2">
-                        <p>{{Ask2.posted_by}}</p>
+                        <p style="margin-bottom: 0;">{{Ask2.posted_by}}</p>
+                        <p style="text-transform: uppercase !important; font-weight: bold !important; margin-bottom: 0; ">{{ Ask2.question_title }}</p>
                     </div>
-                    <div class="col-auto ml-0 pl-0">
-                        <p style="color: rgba(0, 0, 0, 0.212)">{{Ask2.date_posted}}</p>
+                    <div class="col-auto ml-0 pl-0 pr-1">
+                        <p style="color: rgba(0, 0, 0, 0.212); margin-bottom: 0;">{{Ask2.date_posted}}</p>
                     </div>
-                    <div class="col-auto ml-0 pl-0" style="text-transform: uppercase !important; font-weight: bold !important;">{{ Ask2.question_title }}</div>
                 </div>
-                <a href="/question/{{Ask2.qid}}/{{Ask2.slug}}"">
-                    <h4>{{Ask2.question_text|safe}} </h4>
+                <a href="/question/{{Ask2.qid}}/{{Ask2.slug}}">
+                    <p>{{Ask2.question_text|safe}} </p>
                 </a>
                 
             </div>
             {% endfor %}
         </div>
-        <div class="random 1 col-lg-2 ml-4">
+        <div class="random1 col-lg-2 ml-4">
             <div class="card row border-radius-2 bg-color-light box-shadow-1 p-3">
                 <div class="card-body">
                     <h4 class="card-title mb-1 text-4 font-weight-bold"># Fun Fact</h4>
@@ -180,17 +147,5 @@
         </div>
     </div>
 </div>
-
-
-<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-12345678-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-     -->
 
  {% endblock %}

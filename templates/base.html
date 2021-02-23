@@ -8,9 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% load static %}
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-
+	<!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="img/apple-touch-icon.png"> -->
+  <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
 	<!-- Mobile Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
 
@@ -56,18 +57,18 @@
                 <div class='header-row'>
                     <div class="header-column w-100">
                         <div class="header-row justify-content-between">
-                            <div class="header-logo z-index-2 col-lg-2 px-0">
+                            <div class="header-logo col-lg-2 px-0">
                                 {% load static %}
                                 <a href='/' style="color: black; font-weight: bold; font-size: 1.4rem;">
                                     
-                                    <img alt="SRCN" width='80' , height="40" , data-sticky-width="82"
+                                    <img alt="YSC" width='80' , height="40" , data-sticky-width="82"
                                         data-sticky-height="40" src="{% static 'img/logo1.png' %}">
                                         Goodleaf
                                 </a>
                             </div>
 
                             <div
-                                class="header-nav-features header-nav-features-no-border col-lg-5 col-xl-6 px-0 ml-5 mr-0 mt-3">
+                                class="c header-nav-features header-nav-features-no-border col-lg-5 col-xl-6 px-0 ml-5 mr-0 mt-3">
                                 <div class="header-nav-feature pr-lg-4 pr-xl-5 mr-0">
                                     <form  action="/search" method="get" >
                                         <div class="search-with-select">
@@ -109,7 +110,7 @@
                                     </form>
                                 </div>
                             </div>
-                            <div class="d-flex col-lg-3 ml-2 pr-0 pl-5 pl-xl-5">
+                            <div class="d-flex col-lg-3 ml-0 pr-0 pl-0 pl-xl-4 ">
                                 <ul class="header-extra-info">
                                     <li class="ml-0 ml-xl-3">
                                       {% if user.is_authenticated %}
@@ -117,7 +118,8 @@
                                           <a id="btnGroupDrop1" aria-labelledby="btnGroupDrop1" class="a text-decoration-none text-color-dark text-color-hover-primary text-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="icons icon-user"></i>
                                           </a>
-                                          <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">                  
+                                          <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                            <a class="dropdown-item" href="/profile">Profile</a>                  
                                             <a class="dropdown-item" href="/password">Change Password</a>
                                             <a class="dropdown-item" href="/logout">Log out</a>
                                         </div>
@@ -125,7 +127,7 @@
                                         <div class="header-extra-info-text">
                                           <a class="btn btn-primary btn-secondary" href = '/detect'>Detect</a>
                                         </div>
-                                        <div class="header-extra-info-text">
+                                        <div class="d header-extra-info-text">
                                             <a class="btn btn-primary btn-primary ml-4" href = '/ask-question'>Ask</a>
                                         </div>
                                       {% else %}
@@ -501,8 +503,12 @@ h6 span{
                         <input type="email" name="email" class="form-style" placeholder="Your Email" id="email" autocomplete="off" required>
                         <i class="input-icon uil uil-at"></i>
                       </div>  
-                                             <div class="form-group mt-2">
+                      <div class="form-group mt-2">
                         <input type="text" name="fname" class="form-style" placeholder="First Name" id="fname" autocomplete="off" required>
+                       <i class="input-icon uil uil-user"></i>
+                      </div>
+                      <div class="form-group mt-2">
+                        <input type="text" name="lname" class="form-style" placeholder="Last Name" id="lname" autocomplete="off" required>
                        <i class="input-icon uil uil-user"></i>
                       </div>
                       {% csrf_token %}
@@ -574,7 +580,7 @@ h6 span{
 <script src="{% static 'js/theme.js' %}"></script>
 
 <!-- Current Page Vendor and Views -->
-<script src="{% static 'vendor/circle-flip-slideshow/js/jquery.flipshow.min.js' %}"></script>
+<!-- <script src="{% static 'vendor/circle-flip-slideshow/js/jquery.flipshow.min.js' %}"></script> -->
 <script src="{% static 'js/views/view.home.js' %}"></script>
 
 <!-- Theme Custom -->

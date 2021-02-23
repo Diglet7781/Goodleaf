@@ -29,12 +29,21 @@ import markdown2
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse, JsonResponse
 
-
-
-def edit_success(request):
-
-    messages.success(request, "Profile Updated")
-    return redirect("home")
+def edit_profile(request):
+    if request.method == 'POST':
+        form = EditProfileForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Profile Updated")
+            return redirect('home:home')
+    else:
+        if request.user.is_authenticated:
+            form = EditProfileForm()
+    # Display a blank or invalid form.
+    context = {'form': form}
+    return render(request, 'home/profile.html', context)
+    # return render(request, 'home/profile.html')
+            
 class PasswordChangeView(PasswordChangeView):
     form_class = PasswordChangeForm
     success_url = reverse_lazy('password_success')
@@ -176,7 +185,7 @@ def handleSignUp(request):
         username=request.POST['username']
         email=request.POST['email']
         fname=request.POST['fname']
-        # lname=request.POST['lname']
+        lname=request.POST['lname']
         pass1=request.POST['pass1']
         pass2=request.POST['pass2']
 
@@ -213,7 +222,8 @@ def handleSignUp(request):
             return redirect("home")
         # Create the user
         myuser = User.objects.create_user(username, email, pass1)
-        myuser.first_name= fname
+        myuser.first_name=fname
+        myuser.last_name=lname
         myuser.save()     
         subject = 'Thankyou For Joining Us..'
         message = f'Hi {myuser.username}, thank you for registering in our website.'

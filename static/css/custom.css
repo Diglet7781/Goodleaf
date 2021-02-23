@@ -1,38 +1,64 @@
 /* Add here all your CSS customizations */
 @media (max-width: 700px) {
-    .header-row img{
+    .header-logo img{
         width: 60px;
         height: 30px !important;
     }
+    .header-logo a{
+        font-size: 1rem !important;
+    }
+    
     .header-row .d-flex{
         margin-left: 0 !important;
         padding-left: 0 !important;
     }
-    .header-row .d-flex i{
-        font-size: 1.2rem;
-    }
-    .header-row .d-flex a{
-        padding: 5px !important;
-        margin-left: 3px !important;
-        margin-right: 0;
-    }
+
     .header-row .d-flex li{
         margin: 0 !important;
         padding: 0 !important;
     }
-    .header-row button {
-        font-size: 0.45rem;
-        width: 210px;
-        height: 30px;
-        font-weight: bold;
-        overflow: hidden;
+    .header-row .d-flex .header-extra-info-icon{
+        margin-right: 0 !important;
     }
+    .header-row .d-flex .header-extra-info-icon a{
+        padding: 0;
+        margin: 0;
+        margin-left: 1rem;
+    }
+    .header-row .d-flex .header-extra-info-icon i{
+        font-size: 1.7rem;
+    }
+    .header-row .d-flex .header-extra-info-text {
+        padding-left: 0.8rem;
+    }
+    .header-row .d-flex .header-extra-info-text a{
+        padding: 5px !important;
+        margin-left: 3px !important;
+        margin-right: 0;
+        width: 4rem;
+        text-transform: uppercase;
+        height: 2rem;
+        font-size: 0.8rem;
+    }
+    /* .header-row .search-with-select a {
+        margin-right: 0 !important;
+
+        align-self: center !important;
+    } */
     .header-row .search-with-select i {
-        font-size: 1.2rem !important;
-        padding: auto !important;
+        font-size: 1.7rem !important;
     }
+    .header-row .search-with-select{
+        margin-bottom: 1rem !important;
+        /* margin-left: 1rem !important; */
+    }
+
     .header-row .header-nav-features {
         margin: 0 !important;
+    }
+    .c{
+        width: 5rem !important;
+        padding-left: 2rem !important;
     }
     .btn-modified {
         margin-left: 8rem !important;
@@ -44,18 +70,92 @@
         margin-left: 3rem !important;
     }
     .random1{
-        margin-left: 4px !important;
-        padding-left: 4px !important;
+        margin-left: 5px !important;
+        padding-left: 9px !important;
+        margin-right: 0 !important;
     }
     .random2{
-        margin-left: 4rem !important;
+        margin-left: 6rem !important;
     }
     .btn-modern{
-        width: 20rem !important;
+        width: 18rem !important;
     }
+    .random1 .card .row div p{
+        font-size: 0.85rem !important;
+    }
+
+    .random1 .card .row div img{
+        width: 40px;
+        height: 40px;
+    }
+    /* .random1 .card a{
+        font-size: 1rem !important;
+    } */
 }
 
 @media (min-width: 700px) and (max-width: 800px) {
+    .header-logo img{
+        width: 90px;
+        height: 60px !important;
+    }
+    .header-logo a{
+        font-size: 1.3rem !important;
+    }
+    
+    .header-row .d-flex{
+        margin-left: 0.5rem !important;
+        padding-left: 0 !important;
+    }
+
+    .header-row .d-flex li{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .header-row .d-flex .header-extra-info-icon{
+        margin-right: 0 !important;
+    }
+    .header-row .d-flex .header-extra-info-icon a{
+        padding: 0;
+        margin: 0;
+        margin-left: 1rem;
+    }
+    .header-row .d-flex .header-extra-info-icon i{
+        font-size: 1.9rem;
+    }
+    .header-row .d-flex .header-extra-info-text {
+        padding-left: 2rem;
+    }
+    .header-row .d-flex .header-extra-info-text a{
+        padding: 5px !important;
+        margin-left: 3px !important;
+        margin-right: 0 !important;
+        width: 6rem !important;
+        height: 2.5rem !important;
+        font-size: 1rem !important;
+        text-align: center !important;
+        text-transform: uppercase !important;
+    }
+    /* .header-row .search-with-select a {
+        margin-right: 0 !important;
+
+        align-self: center !important;
+    } */
+    .header-row .search-with-select{
+        margin-bottom: 1rem !important;
+        /* margin-left: 1rem !important; */
+    }
+    .header-row .search-with-select i {
+        font-size: 1.9rem !important;
+    }
+    .header-row .header-nav-features {
+        margin: 0 !important;
+    }
+    .c{
+        width: 30rem !important;
+        padding-left: 2rem !important;
+    }
+
+
     .btn-modified {
         margin-left: 20rem !important;
     }
@@ -98,4 +198,12 @@
 .custom-title-box h1{
     font-weight: bold;
     font-size: 1.5rem !important;
+}
+.header-row .d-flex .header-extra-info-text a{
+    width: 4rem;
+    height: 2.2rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    padding: 5px;
+    padding-top: 4px;
 }
