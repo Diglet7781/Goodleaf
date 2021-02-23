@@ -8,24 +8,25 @@
 <script src="/static/ckeditor/ckeditor/ckeditor.js"></script>
     <div class="body">
         <div class="container">
+            <center>
             <div class="col-lg-8 mt-4" style="text-align: justify;">
-                <div class="card row mb-2 p-4">
+                <div class="card row mb-2 p-2">
                     <div class="row">
                         <div class="col-auto mr-0 pr-0"><img src="{% static 'img/iuser.png' %}" width="30" height="30"
                                 style="border-radius: 100%;"></div>
-                        <div class="col-auto pl-2">
+                        <div class="col-auto px-1">
                             <p>{{ question.posted_by }}</p>
                         </div>
-                        <div class="col-auto ml-0 pl-0">
+                        <div class="col-auto ml-0 pl-0 pr-0">
                             <p style="color: rgba(0, 0, 0, 0.212)">{{ question.date_posted }}</p>
                         </div>
                     </div>
-                        <p style="text-align: justify;">{{ question.question_text|safe }}</p>
+                        <p style="text-align: justify; overflow-x: clip !important;">{{ question.question_text|safe }}</p>
                         <a class="btn btn-modified1 mt-2" href = '#form2' style="width: 6rem;" data-hash>Answer</a>
                 </div>
                 <h3 style="margin: 1rem; text-align: center;">All answers:</h3>
                 {% for comment in comments %}
-                <div class="card row mb-2 p-4">
+                <div class="card row mb-2 p-2 pb-4">
                     <div class="row">
                         <div class="col-auto mr-0 pr-0"><img src="{% static 'img/iuser.png' %}" width="30" height="30"
                                 style="border-radius: 100%;"></div>
@@ -73,5 +74,6 @@
                 </div>
             </div>
             </div>
+        </center>
     </div>
 {% endblock body %}
